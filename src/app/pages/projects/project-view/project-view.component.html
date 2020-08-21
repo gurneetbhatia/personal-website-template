@@ -1,1 +1,52 @@
-<p>project-view works!</p>
+<div class='container'>
+    <h1>{{ project.title }}</h1>
+    <small class='text-muted'>{{ project.date }}</small>
+
+    <div class='gallery'>
+        <div *ngIf="project.titleVideoUrl">
+            <iframe [src]="project.titleVideoUrl"
+                    width="540"
+                    height="240"
+                    frameborder="0"
+                    allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+
+        <div *ngIf="project.titlePhotoUrl">
+            <img [src]="project.titlePhotoUrl" [alt]="project.title" />
+        </div>
+    </div>
+    <hr />
+
+    <div *ngFor="let section of project.sections">
+        <h3>{{ section.title }}</h3>
+        <p *ngFor="let sectionText of section.text">
+            {{ sectionText }}
+        </p>
+    </div>
+
+    <div *ngIf="project.tech.length > 0">
+        <h3>Technologies Used</h3>
+        <ul class="list">
+            <li *ngFor="let tech of project.tech">{{ tech }}</li>
+        </ul>
+    </div>
+
+    <div *ngIf="project.projectLinks.length > 0">
+        <h3>Links</h3>
+        <ul class='list'>
+            <li *ngFor="let link of project.projectLinks">
+                <a [href]="link.link" target="_blank">{{link.text}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="project.galleryImages">
+        <h3>Gallery</h3>
+        <div *ngFor="let image of project.galleryImages" class="gallery">
+            <img [src]="image.photoUrl" />
+            <p class="text-muted">{{ image.text }}</p>
+            <br />
+        </div>
+    </div>
+</div>

@@ -1,1 +1,20 @@
-<p>project-card works!</p>
+<div class="card card-cascade narrower">
+    <div class="view view-cascade overlay">
+      <img class="card-img-top" [src]="project.cardPhotoUrl"
+        [alt]="project.title">
+      <a [routerLink]="['/projects', project.id]">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <div class="card-body card-body-cascade">
+      <h4 class="font-weight-bold card-title">{{ project.title }}</h4>
+      <p class="card-text">{{ project.description }}</p>
+      <a [routerLink]="['/projects', project.id]" class="btn btn-unique">View</a>
+    </div>
+    <div class='rounded-bottom mdb-color lighten-3 text-center pt-3'>
+        <p class='white-text pr-2'>
+            <i class='fa fa-clock-o pr-1'></i>{{ project.date }}
+        </p>
+    </div>
+  
+  </div>

@@ -32,4 +32,8 @@ export class DataService {
   getProjects(): Project[] {
     return projects;
   }
+
+  getProject(id: string): Project {
+    return projects.filter(proj => proj.id === id)[0];
+  }
 }

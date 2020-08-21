@@ -1,0 +1,18 @@
+.list {
+	list-style-type: none;
+}
+img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.gallery {
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (min-width: 950px) {
+    img {
+        width: 600px;
+    }
+}
