@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
-//import { DataService } from 'src/app/services/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -12,19 +12,19 @@ export class HomeComponent implements OnInit {
   @ViewChild('gitStatsContainer') gitStatsContainer: ElementRef;
   gitStats = ``;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    // this.dataService.getGitStats().subscribe(
-    //   (resp) => {
-    //     console.log("here")
-    //     this.gitStats = resp;
-    //     this.gitStatsContainer.nativeElement.innerHTML = this.gitStats;
-    //   },
-    //   (err) => {
-    //     console.log(err);
-    //   }
-    // )
+    this.dataService.getGitStats('your-username-goes-here').subscribe(
+      (resp) => {
+        console.log("here")
+        this.gitStats = resp;
+        this.gitStatsContainer.nativeElement.innerHTML = this.gitStats;
+      },
+      (err) => {
+        console.log(err);
+      }
+    )
   }
 
 }
