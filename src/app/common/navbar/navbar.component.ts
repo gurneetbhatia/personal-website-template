@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  open: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  collapseNavbar() {
+    if (this.open) {
+      document.getElementById('navbar-button').click()
+    }
+  }
+
+  navbarButtonClicked() {
+    this.open = !this.open;
   }
 
 }
