@@ -12,6 +12,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { CompetitionCardComponent } from './pages/competitions/competition-card/competition-card.component';
 import { ProjectCardComponent } from './pages/projects/project-card/project-card.component';
 import { ProjectViewComponent } from './pages/projects/project-view/project-view.component';
+import { RotateTextDirective } from './common/rotate-text.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProjectViewComponent } from './pages/projects/project-view/project-view
     FooterComponent,
     CompetitionCardComponent,
     ProjectCardComponent,
-    ProjectViewComponent
+    ProjectViewComponent,
+    RotateTextDirective
   ],
   imports: [
     BrowserModule,
