@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Competition } from '../competition';
 
 @Component({
   selector: 'app-competition-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./competition-card.component.css']
 })
 export class CompetitionCardComponent implements OnInit {
+
+  @Input() competition: Competition;
 
   constructor() { }
 
