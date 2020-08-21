@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getGitStats('your-username-goes-here').subscribe(
       (resp) => {
-        console.log("here")
         this.gitStats = resp;
         this.gitStatsContainer.nativeElement.innerHTML = this.gitStats;
       },

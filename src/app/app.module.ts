@@ -9,6 +9,7 @@ import { CompetitionsComponent } from './pages/competitions/competitions.compone
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { CompetitionCardComponent } from './pages/competitions/competition-card/competition-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './common/footer/footer.component';
     CompetitionsComponent,
     ProjectsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CompetitionCardComponent
   ],
   imports: [
     BrowserModule,
