@@ -11,6 +11,7 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { CompetitionCardComponent } from './pages/competitions/competition-card/competition-card.component';
 import { ProjectCardComponent } from './pages/projects/project-card/project-card.component';
+import { ProjectViewComponent } from './pages/projects/project-view/project-view.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectCardComponent } from './pages/projects/project-card/project-card
     NavbarComponent,
     FooterComponent,
     CompetitionCardComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ProjectViewComponent
   ],
   imports: [
     BrowserModule,
