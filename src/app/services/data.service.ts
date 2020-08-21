@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Competition } from '../pages/competitions/competition';
-import { competitions } from '../common/data';
+import { competitions, projects } from '../common/data';
+import { Project } from '../pages/projects/project';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -26,5 +27,9 @@ export class DataService {
 
   getCompetitions(): Competition[] {
     return competitions;
+  }
+
+  getProjects(): Project[] {
+    return projects;
   }
 }

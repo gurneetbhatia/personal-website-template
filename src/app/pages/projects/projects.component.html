@@ -1,1 +1,13 @@
-<p>projects works!</p>
+<div class='container'>
+    <h2>Projects</h2>
+    <p>
+        I have worked on a number of personal projects in the past
+        either for fun, or to extend my knowledge of a certain
+        set of technologies and principles that may have caught my attention.
+        On this page you will find a few projects that I think are worth sharing
+        and have worked on over the past few years.
+    </p>
+    <div *ngFor="let project of projectsList" align="center">
+        <app-project-card [project]="project"></app-project-card>
+    </div>
+</div>
