@@ -1,1 +1,11 @@
-<p>competitions works!</p>
+<div class='container'>
+    <h2>Hackathons and Competitions</h2>
+    <p>
+        I greatly enjoy participating in hackathons and competitive 
+        programming events. Events like these are amazing opportunities
+        to test your skills, get creative, and expand your network.
+    </p>
+    <div *ngFor="let comp of competitionsList" align="center">
+        <app-competition-card [competition]="comp"></app-competition-card>
+    </div>
+</div>

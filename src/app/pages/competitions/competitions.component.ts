@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Competition } from './competition';
+import { DataService } from 'src/app/services/data.service';
+
 @Component({
   selector: 'app-competitions',
   templateUrl: './competitions.component.html',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionsComponent implements OnInit {
 
-  constructor() { }
+  competitionsList: Competition[];
+
+  constructor(private dataService: DataService) {
+    this.competitionsList = this.dataService.getCompetitions();
+  }
 
   ngOnInit(): void {
   }
