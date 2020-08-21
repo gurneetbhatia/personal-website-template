@@ -10,6 +10,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { CompetitionCardComponent } from './pages/competitions/competition-card/competition-card.component';
+import { ProjectCardComponent } from './pages/projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CompetitionCardComponent } from './pages/competitions/competition-card/
     ProjectsComponent,
     NavbarComponent,
     FooterComponent,
-    CompetitionCardComponent
+    CompetitionCardComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
