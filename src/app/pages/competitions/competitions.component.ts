@@ -12,11 +12,10 @@ export class CompetitionsComponent implements OnInit {
 
   competitionsList: Competition[];
 
-  constructor(private dataService: DataService) {
-    this.competitionsList = this.dataService.getCompetitions();
-  }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.competitionsList = this.dataService.getCompetitions();
   }
 
 }
