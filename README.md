@@ -25,3 +25,14 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Customising the content
+
+### The index file
+
+Like any other Angular app, the index file by itself contains very minimal content. I would recommend changing the title to include your name instead of **"TemplateWebsite"**
+```html
+<title>TemplateWebsite</title>
+```
+Filepath for the index file: `src\index.html`.
+You can also modify the logo showed in the tab next to the website title by replacing `src\favicon.ico` with your own file. If you do this, you need to make sure that the file you replace it with is also called `favicon.ico`.
