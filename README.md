@@ -142,3 +142,40 @@ export const projects: Project[] = [
 }
 ```
 This is a simple projects list containing only one Project object but you can define as many as you would like.
+
+### The Competitions Page
+
+On this page you define the competitions and hackathons that you have participated in. You can also choose to mention any awards that you may have won on this page. The UI consists of a list of CompetitionCard components (define in `src\app\pages\competitions`) that use the data defined in `src\app\common\data.ts` just like for the projects. The list of competitions is defined at line 4, the one that starts with
+```ts
+export const competitions: Competition[]
+```
+To properly understand how to define each competition, we need to have a look at the definition of the Competition class, provided in `src\app\pages\competitions\competition.ts`. The structure of each competiton is as follows:
+```ts
+title: string; // title displayed for each competition/event
+description: string; // a short description. no more than a couple of lines
+date: string; // a date in any format that you would like
+photoUrl?: string; // if provided, the photo displayed in the competition card
+```
+The `photoUrl` property is optional, but all others are necessary to define a `Competition` object. The following is an example declaration of the `competitions` list in the `data.ts` file. It only includes one object, but you can define as many as you would like.
+```ts
+export const competitions: Competition[]  = [
+    {
+        title: "Some hackathon",
+        description: `What you did at this hackathon`,
+        date: "April, 2020"
+    },
+
+    {
+        title: "Some competition",
+        description: `About the competition and your experience`,
+        date: "March, 2020"
+    },
+
+    {
+        title: "Some award",
+        description: `About the award and its prestige (you can also add images like this)`,
+        date: "March, 2020",
+        photoUrl: "https://techcrunch.com/wp-content/uploads/2019/06/GettyImages-944060114.jpg?w=730&crop=1"
+    }
+]
+```
