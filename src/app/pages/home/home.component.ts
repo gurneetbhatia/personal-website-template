@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { DataService } from 'src/app/services/data.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ export class HomeComponent implements OnInit {
   @ViewChild('gitStatsContainer') gitStatsContainer: ElementRef;
   gitStats = ``;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,
+              private notificationService: NotificationService) { }
 
   ngOnInit(): void {
     this.dataService.getGitStats('your-username-goes-here').subscribe(
@@ -21,7 +23,7 @@ export class HomeComponent implements OnInit {
         this.gitStatsContainer.nativeElement.innerHTML = this.gitStats;
       },
       (err) => {
-        console.log(err);
+        this.notificationService.showError("There was a problem fetching git data at this time. Please try again later.")
       }
     )
   }
