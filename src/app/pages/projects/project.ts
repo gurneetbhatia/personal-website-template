@@ -14,5 +14,4 @@ export class Project {
     titlePhotoUrl?: string;
     titleVideoUrl?: string;
     galleryImages?: GalleryImage[];
-    videoUrl?: string;
 }
