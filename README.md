@@ -36,3 +36,15 @@ Like any other Angular app, the index file by itself contains very minimal conte
 ```
 Filepath for the index file: `src\index.html`.
 You can also modify the logo showed in the tab next to the website title by replacing `src\favicon.ico` with your own file. If you do this, you need to make sure that the file you replace it with is also called `favicon.ico`.
+
+### The Home Page
+
+The file relating to the Home Page component are located inside `src\app\pages\home`. These are the TypeScript component definition, the HTML template and the CSS design. Modifications for this page need to be made in the TypeScript and HTML files. In the HTML file, you can modify the content to make it read whatever you would like. The layout has already been defined.
+
+In the TypeScript file, you need to look at the `ngOnInit` function in the `HomeComponent` class and modify the line that starts with 
+```ts
+this.dataService.getGitStats('your-username-goes-here')
+```
+You need to modify the string *"your-username-goes-here"* with your own GitHub username.
+
+### 
