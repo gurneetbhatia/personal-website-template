@@ -1,6 +1,6 @@
 # Personal Website Template
 
-This is a template Angular application designed for developer to customise and display their achievements and personal projects. The website that this project was based on is https://gurneetbhatia.me.
+This is a template Angular application designed for developer to customise and display their achievements and personal projects. The website that this project was based on is https://gurneetbhatia.me. You can check it out to see what the template would look like.
 
 ## Installing Angular
 
