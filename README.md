@@ -46,6 +46,7 @@ In the TypeScript file, you need to look at the `ngOnInit` function in the `Home
 this.dataService.getGitStats('your-username-goes-here')
 ```
 You need to modify the string *"your-username-goes-here"* with your own GitHub username.
+In addition to this, you may also want to modify the list of rotating text at the top of the `HomePage` component. You can do this by going into `src\app\common\rotate-text.directive.ts` and modifying the declaration of the `words` property in the constructor on `line 14`.
 
 ### The Projects Page
 
